@@ -4,7 +4,8 @@
   "description": "Convert an object to a string",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "posttest": "mocha test/readme.js -R markdown > README.md"
   },
   "repository": {
     "type": "git",

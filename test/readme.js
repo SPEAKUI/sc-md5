@@ -1,19 +1,15 @@
 var should = require( "should" ),
-  objectToHash = require( ".." ),
-  dummy = require( "./dummy" );
+  md5 = require( ".." );
 
-describe( "sc-object-to-string", function () {
+describe( "sc-md5", function () {
 
-  dummy.data.tests.forEach( function ( _test, _i ) {
-
-    it( "should convert object test " + _i + " to a string", function () {
-      var stringified = objectToHash.stringify( _test.object ),
-        hashed = objectToHash( _test.object );
-
-      stringified.should.eql( _test.stringified );
-      hashed.should.eql( _test.hashed );
+  it( "The main point for this module is to be able to convert anything that can be `JSON.stringify` to an md5 hash. Specifically an `object`", function () {
+    var hash = md5( {
+      name: "David",
+      age: 30
     } );
 
+    hash.should.equal( "0699d2ce6d18ca8c8a993c6905e3bf9d" );
   } );
 
 } );
