@@ -1,6 +1,6 @@
 {
   "name": "sc-md5",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Convert an object to a string",
   "main": "index.js",
   "scripts": {
